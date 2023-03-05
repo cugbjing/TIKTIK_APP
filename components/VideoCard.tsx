@@ -31,6 +31,12 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
     }
 
     useEffect(() => {
+        if(videoRef?.current) {
+            videoRef.current.muted = isVideoMuted
+        }
+    }, [isVideoMuted])
+
+    useEffect(() => {
         if (videoRef?.current) {
             videoRef.current.muted = isVideoMuted
         }
