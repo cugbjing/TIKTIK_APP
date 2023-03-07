@@ -5,7 +5,7 @@ import axios from 'axios'
 import { Video } from '../types'
 
 interface IProps {
-  videos: Video[]
+  videos: Video[];
 }
 
 const Home = ({ videos } : IProps) => {
