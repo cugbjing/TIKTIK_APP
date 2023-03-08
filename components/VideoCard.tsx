@@ -11,7 +11,7 @@ import postedBy from '@/sanity-backend/schemas/postedBy'
 import user from '@/sanity-backend/schemas/user'
 
 interface IProps {
-    post: Video
+    post: Video;
 }
 
 const VideoCard: NextPage<IProps> = ({ post }) => {
@@ -29,6 +29,12 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
             setPlaying(true)
         }
     }
+
+    useEffect(() => {
+        if(videoRef?.current) {
+            videoRef.current.muted = isVideoMuted
+        }
+    }, [isVideoMuted])
 
     useEffect(() => {
         if (videoRef?.current) {

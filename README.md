@@ -28,24 +28,28 @@ This is a code along practice, see [youtube link](https://youtu.be/CcBHZ0t2Qwc)
 - `Path Intellisense` help with imports, ctrl + space
 - `ES7+ React/Redux/React-Native snippet` extension, use `rafce` to create react arrow functional component
 
-### Run the next.js project
-First, run the development server:
+### Typescript
+- Good practice to specify the interface `IProps` if the component is receiving props
+
+## How to run the project
+
+### Tokens
+- I had a `.env.development` file in local (not pushed to github)
+- Define env params 
+```
+NEXT_PUBLIC_SANITY_TOKEN = 
+NEXT_PUBLIC_GOOGLE_API_TOKEN = 
+NEXT_PUBLIC_BASE_URL = http://localhost:3000
+```
 
 ### Install the Same Project Dependencies
 `npm install --legacy-peer-deps`
 I removed `react-google-login` to be able to install other packages correctly, installed `npmjs.com/package/@react-oauth/google` instead
 
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-### Run the sanity 
+### Run the sanity backend
 - created a project `sanity-backend` using sanity cli 
 - under the folder sanity-backend, use `npm run dev` to start the local sanity studio, the schemas defined can be viewed on `http://localhost:3333`
+
+### Run the next.js front end
+- `npm run dev`
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result
