@@ -9,7 +9,11 @@ This is a code along practice, see [youtube link](https://youtu.be/CcBHZ0t2Qwc)
 
 - Use tailwind for style, [install tailwind with Next.js](https://tailwindcss.com/docs/guides/nextjs)
 - Have all the lists of constants in one file
-- Next project fetch data by using `getServerSideProps`, Next.js will pre-render this page on each request using the data returned by this functions
+- Next project fetch data by using `getServerSideProps`, Next.js will pre-render this page on each request using the data returned by this functions, when use [id].tsx under the pages folder, need to use this function to get server-side params
+    - Have a page setup under `pages/profile/[id].tsx`
+    - Correspondingly, have an api route under `pages/api/profile/[id].ts`
+    - In the page file, define interface IProps to specify what types of data the page will receive
+
 - In next js you need to config your image hosting in `next.config.js`
 
 ### Use Google Identity Services
