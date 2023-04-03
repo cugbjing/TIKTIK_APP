@@ -15,6 +15,7 @@ This is a code along practice, see [youtube link](https://youtu.be/CcBHZ0t2Qwc)
     - In the page file, define interface IProps to specify what types of data the page will receive
 
 - In next js you need to config your image hosting in `next.config.js`
+- You can configure typescript in `next.config.js` file to bypass the build errors
 
 ### Use Google Identity Services
 - Install `@react-oauth/google` and `jsw-decode`, since the new Google Identity Services does not allow you to get the profile username or image, need to decode the json webtoken 
