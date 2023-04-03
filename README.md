@@ -16,7 +16,10 @@ This is a code along practice, see [youtube link](https://youtu.be/CcBHZ0t2Qwc)
 
 - In next js you need to config your image hosting in `next.config.js`
 - You can configure typescript in `next.config.js` file to bypass the build errors
-
+- After deploy it, need to fetch data from the deployed website
+    - add the new url as `NEXT_PUBLIC_BASE_URL` environmental variable in Vercel, insert one empty line in next config file for vercel to add line there
+    - Add the url to sanity backend, under settings -> API settings -> CORS origins add the new url with allow credentials
+    - Fix the settings on Google, console.cloud.google.com -> project -> credentials -> oauth 2 -> Authorized JavaScript origins, add new URI -> Authorized redirect URIs, add new URI here too
 ### Use Google Identity Services
 - Install `@react-oauth/google` and `jsw-decode`, since the new Google Identity Services does not allow you to get the profile username or image, need to decode the json webtoken 
 - Setting up oath
